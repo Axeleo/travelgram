@@ -97,10 +97,8 @@ post '/session' do
   # create new session
   session[:user_id] = user.id
   redirect '/'
-  else 
-    erb :login
-  end
-
+  end 
+  erb :dashboard
 end
 
 get '/oauth/callback' do
