@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo|Fredericka+the+Great');
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +18,15 @@
   border-bottom: 2px solid #fed165;
   color: #d02896;
 }
+body {
+  font-family: font-family: 'Fredericka the Great',
+  cursive;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Archivo',
+  sans-serif;
+}
 
 .Navbar__Link {
   padding-right: 8px;
@@ -33,39 +44,42 @@
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .Navbar__Items,
   .Navbar {
     flex-direction: column;
   }
+
   .Navbar__Items {
     display: none;
   }
+
   .Navbar__Items--right {
     margin-left: 0;
   }
+
   .Navbar__ToggleShow {
     display: flex;
     z-index: 1;
   }
+
   .Navbar__Link-toggle {
     align-self: flex-end;
     display: initial;
     position: absolute;
     cursor: pointer;
   }
+
   .Navbar__Link-toggle img {
     width: 30px;
     display: flex;
   }
-}
 
-.info-window {
-  width: 200px;
-}
+  }
 
-@media (min-width: 320px) and (max-width: 480px) {
-
+  .info-window {
+    width: 200px;
+  }
 html {
   height: 100%;
 }
@@ -75,9 +89,6 @@ body {
 .profile-pic {
   border-radius: 50%;
   height: 60%;
-}
-header {
-  
 }
 
 .logo {
