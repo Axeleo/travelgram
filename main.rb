@@ -61,6 +61,24 @@ get '/' do
   erb :index
 end
 
+get '/signup' do 
+  if logged_in?
+    redirect '/'
+  end
+    erb :signup
+end
+
+post '/users' do
+  if logged_in? || User.find_by(email: params[:email])
+    redirect '/'
+  else
+    user = User.new
+    user.email = params[:email]
+    user.password = params[:password]
+    user.save
+  erb :dashboard
+end
+
 get '/login' do
   erb :login
 end
@@ -97,7 +115,5 @@ get '/oauth/callback' do
   erb :map
 end
 
-get '/map' do
-  erb :map
-end
+
 
