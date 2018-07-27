@@ -116,7 +116,7 @@ get '/oauth/callback' do
       })
 
   @access_token = response['access_token']
-  recent_media = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=#{@access_token}").parsed_response
+  recent_media = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=#{@access_token}")
   
   cache_photo_data(recent_media)
   update_user_info(recent_media)
