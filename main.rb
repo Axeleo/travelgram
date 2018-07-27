@@ -117,7 +117,7 @@ get '/oauth/callback' do
 
   @access_token = response['access_token']
   recent_media = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=#{@access_token}")
-  p recent_media
+  p recent_media['data']
   cache_photo_data(recent_media)
   update_user_info(recent_media)
   @photo_data = Photo.where(user_id: current_user.id).pluck(:thumbnail_url, :latitude, :longitude, :caption, :likes, :creation_time, :location_name, :picture_url)
