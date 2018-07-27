@@ -18,8 +18,7 @@
   color: #d02896;
 }
 body {
-  font-family: font-family: 'Fredericka the Great',
-  cursive;
+  font-family: 'Fredericka the Great', cursive;
 }
 
 h1, h2, h3, h4 {
@@ -41,6 +40,12 @@ h1, h2, h3, h4 {
 
 .Navbar__Link-toggle {
   display: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Fredericka the Great',
+  cursive;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -128,8 +133,7 @@ body {
 }
 
 input {
-  font-family: font-family: 'Fredericka the Great',
-  cursive;
+  font-family: 'Fredericka the Great', cursive;
   border-radius: 20%;
   border: 1px solid #fed165;
 }

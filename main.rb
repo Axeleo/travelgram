@@ -79,7 +79,7 @@ post '/users' do
   erb :dashboard
 end
 
-get 'about' do
+get '/about' do
   erb :about
 end
 
