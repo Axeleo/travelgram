@@ -131,6 +131,7 @@ input {
   font-family: font-family: 'Fredericka the Great',
   cursive;
   border-radius: 20%;
+  border: 1px solid #fed165;
 }
 
 .about, .login-form{
@@ -139,4 +140,6 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 20%;
+  border: 1px solid #d02896;
 }
