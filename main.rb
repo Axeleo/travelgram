@@ -76,6 +76,7 @@ post '/users' do
     user.email = params[:email]
     user.password = params[:password]
     user.save
+  end
   erb :dashboard
 end
 
