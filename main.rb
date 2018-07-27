@@ -96,9 +96,10 @@ post '/session' do
   if user && user.authenticate(params[:password])
   # create new session
   session[:user_id] = user.id
-  redirect '/'
-  end 
   erb :dashboard
+  else 
+    erb :login
+  end
 end
 
 get '/oauth/callback' do
