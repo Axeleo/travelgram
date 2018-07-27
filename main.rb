@@ -80,6 +80,13 @@ post '/users' do
   erb :dashboard
 end
 
+get '/dashboard' do
+  if logged_in?
+    redirect '/'
+  end
+erb :dashboard
+end
+
 get '/login' do
   erb :login
 end
