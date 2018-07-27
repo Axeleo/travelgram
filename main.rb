@@ -1,4 +1,3 @@
-     
 
 require 'pry'
 require 'httparty'
@@ -69,7 +68,7 @@ get '/signup' do
 end
 
 post '/users' do
-  if logged_in? || User.find_by(email: params[:email])
+  unless logged_in? || User.find_by(email: params[:email])
     redirect '/'
   else
     user = User.new
@@ -80,8 +79,12 @@ post '/users' do
   erb :dashboard
 end
 
+get 'about' do
+  erb :about
+end
+
 get '/dashboard' do
-  if logged_in?
+  unless logged_in?
     redirect '/'
   end
 erb :dashboard
@@ -94,7 +97,6 @@ end
 post '/session' do
   user = User.find_by(email: params[:email])
   if user && user.authenticate(params[:password])
-  # create new session
   session[:user_id] = user.id
   erb :dashboard
   else 

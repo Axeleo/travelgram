@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo|Fredericka+the+Great');
 
 * {
   box-sizing: border-box;
@@ -128,4 +127,16 @@ body {
   z-index: 1;
 }
 
+input {
+  font-family: font-family: 'Fredericka the Great',
+  cursive;
+  border-radius: 20%;
+}
+
+.about, .login-form{
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
