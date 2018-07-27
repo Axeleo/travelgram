@@ -39,7 +39,7 @@ helpers do
 
   def cache_photo_data(recent_media)
     recent_media['data'].each do |media| 
-      if media['location'] && media['location']['text'] && !Photo.find_by(caption: media['caption']['text'])
+      if media['location'] && media['caption']['text'] && !Photo.find_by(caption: media['caption']['text'])
       photo = Photo.new
       photo.user_id = current_user.id
       photo.latitude = media['location']['latitude']
