@@ -4,7 +4,7 @@
 
 In its current state due to the limitations of Instagrams API the app is constricted to sandbox mode if you would like to use the app send me a message and I will verify you as a User. You can use the app here.
 
-[TravelGram][https://shrouded-badlands-24074.herokuapp.com]
+[TravelGram](https://shrouded-badlands-24074.herokuapp.com)
 
 ### Concept
 
