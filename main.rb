@@ -3,6 +3,7 @@ require 'pry'
 require 'httparty'
 require "sinatra"
 require "instagram"
+require 'sinatra/reloader'
 
 require_relative 'db_config'
 require_relative 'models/photo'
@@ -81,6 +82,10 @@ end
 
 get '/about' do
   erb :about
+end
+
+get '/futureworks' do 
+  erb :futureworks
 end
 
 get '/dashboard' do

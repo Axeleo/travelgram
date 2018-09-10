@@ -10,6 +10,8 @@ body {
   font-size: 1em;
   font-family: 'Rubik',
   sans-serif;
+  background-color: whitesmoke;
+  /* background-image: url("https://www.transparenttextures.com/patterns/shattered.png"); */
 }
 
 h1 {
@@ -20,12 +22,14 @@ h1 {
 
 /* NAV BAR Styles */
 .nav-bar {
+  background-color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  position: relative;
 }
 .nav-bar a {
   padding: 1em;
@@ -50,13 +54,18 @@ h1 {
   width: 2em;
   margin: 0 auto;
 }
+ /* logo */
+
 .logo {
   display: flex;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  z-index: -10;
 }
+
 .logo-animation {
   position: absolute;
   padding-top:0.2em;
@@ -72,30 +81,86 @@ h1 {
   color: #fed165;
 }
 
-.signup {
-  margin: 0 auto;
+.signup, .login {
+  margin: 5rem auto 0 auto;
+  background-color: white;
   width: 30%;
-  border: 1px solid rgba(216, 216, 216, 0.986);
+  border: 2px solid #d02896;
   border-radius: 0.5em;
   text-align: center;
 }
 
-.signup form {
+form {
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2em;
 }
-.signup input{
-  appearance: none;
-  -webkit-appearance: none;
-  margin: 0.5em;
+
+form p {
+  margin: 1rem;
+  width: 50%;
+}
+
+.signup h3, .login h3 {
+  margin: 1rem;
+  font-weight: 400;
+}
+
+input{
+  border: none;
+  font-size: 1rem;
+  margin: 1rem;
   border-bottom: 3px solid rgba(216, 216, 216, 0.986);
   transition: all 1.2s ease;
 }
-.signup input:focus{
-  margin: 2em;
+
+input:focus{
+  outline: none;
   border-bottom: 3px solid #d02896;
 }
 
+button {
+  margin-top: 2rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  border: 1px solid   black;
+  background-color: white;
+}
 
+button:hover {
+  color: #fed165;
+  border: 1px solid #fed165;
+}
+
+.about {
+  margin: 8rem auto 0 auto;
+  text-align: center;
+  width: 30%;
+  background-color: white;
+  padding: 3rem;
+  border: 2px solid #d02896;
+  border-radius: 1rem;
+}
+
+.about h3 {
+  margin-bottom: 1.5rem;
+  font-weight: 400; 
+}
+
+.personal-link {
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fed165;
+  color: white; 
+  transition: all 0.6s ease;
+}
+
+.personal-link:hover {
+  color: #fed165;
+  background-color: white;
+  border: 1px solid #fed165;
+}
