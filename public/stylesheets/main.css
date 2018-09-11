@@ -15,8 +15,8 @@ body {
 
 h1 {
   font-size: 2em;
-  font-family: 'Archivo',
-    sans-serif;
+  font-family: 'Pacifico',
+  cursive;
 }
 
 /* NAV BAR Styles */
@@ -191,7 +191,8 @@ button:hover {
   }
 
   .signup,
-  .login {
+  .login,
+  .about {
     width: 100%;
     border: none;
     border-radius: none;
@@ -260,5 +261,15 @@ button:hover {
   .logo-img {
     width: 2em;
     margin: 0;
+  }
+
+  .personal-link,
+  .authenticate a {
+    border-radius: 0;
+    line-height: 1rem;
+    padding: 0;
+    text-decoration: none;
+    background-color: white;
+    color: #fed165;
   }
 }
