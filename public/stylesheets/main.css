@@ -1,5 +1,5 @@
 #map {
-  height: 100vh;
+  height: 100% !important;
 }
 
 html,
@@ -157,7 +157,7 @@ button:hover {
 .about {
   margin: 8rem auto 0 auto;
   text-align: center;
-  width: 30%;
+  width: 80%;
   background-color: white;
   padding: 3rem;
   border: 2px solid #d02896;
