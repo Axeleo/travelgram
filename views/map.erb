@@ -331,15 +331,20 @@ function initMap() {
 
   function generate_markers(photoData) {
     for (let index = 0; index < photoData.length; index++) {
-      var latLng = new google.maps.LatLng(photoData[index][1],photoData[index][2])
-      console.log(photoData[index][0])
-      var date = moment.unix(photoData[index][5]).format("MMM Do YYYY").toString()
+      let photoLat = photoData[index][1]
+      let photoLng = photoData[index][2]
+      let photoTitle = photoData[index][3].substring(0, 20) + "..."
+      let photoLikes = photoData[index][4]
+      let photoDate = moment.unix(photoData[index][5]).format("MMM Do YYYY").toString()
+      let photoLocationName = photoData[index][6]
+
+      var latLng = new google.maps.LatLng(photoLat, photoLng)
       var contentString = "<div class=\"info-window\">" + 
-        "<img src=" + photoData[index][0] + ">"+
-        "<h4>" + photoData[index][6] + "</h4>" + 
-        "<p>" + date + "</br>" +
-        photoData[index][4] + "</br>" + 
-        photoData[index][3] + 
+        "<img src=" + photoData[index][0] + ">" +
+        "<h4>" + photoLocationName + "</h4>" + 
+        "<p>" + photoDate + "</br>" +
+        photoLikes + "<i class=\"fas fa-heart\"></i>" + "</br>" + 
+        photoTitle + 
         "</p>" + "</div>"
       var infoWindow = new google.maps.InfoWindow({ content: contentString });
       var marker = new google.maps.Marker({
