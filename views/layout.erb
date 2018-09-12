@@ -27,8 +27,12 @@
         <div class="logo-animation"><i class="fas fa-camera-retro"></i> - - - - - - - - - - - <i class="fas fa-times"></i></div>
       </div>
       <div class="nav-bar-right">
+      <% if logged_in?  %>
+        <img class="profile-pic" src="<%= current_user.profile_pic_url%>" alt="">
+      <% else  %>
         <a href="/login">Login</a>
         <a href="/signup">Signup</a>
+      <% end %>
       </div>
     </nav>
     <%# Mobile nav, to be refactored into single design %>
