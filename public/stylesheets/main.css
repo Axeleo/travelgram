@@ -164,7 +164,31 @@ button:hover {
   font-weight: 400;
 }
 
+.authenticate {
+  border: 2px solid #d02896;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  padding: 3rem;
+  margin: 8rem auto 0 auto;
+  background-color: white;
+}
 
+.authenticate a {
+  color: #fed165;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  border: 1px solid #fed165;
+  transition: all 0.6s ease
+}
+
+.authenticate img {
+  width: 8rem;
+  height: 8rem;
+  padding: 1rem;
+}
 
 .personal-link,
 .authenticate a {
