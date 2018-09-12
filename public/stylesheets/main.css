@@ -59,6 +59,7 @@ h1 {
 }
 
 .profile-pic {
+  width: 4rem;
   border-radius: 50%;
 }
 
