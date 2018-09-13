@@ -84,8 +84,14 @@ get '/about' do
   erb :about
 end
 
-get '/futureworks' do 
-  erb :futureworks
+get '/public' do
+  @users = User.all
+  erb :public_maps
+end
+
+get '/maps/:id' do
+  @photo_data = Photo.where(user_id: params[:id]).pluck(:thumbnail_url, :latitude, :longitude, :caption, :likes, :creation_time, :location_name, :picture_url)
+  erb :map
 end
 
 get '/dashboard' do
@@ -116,7 +122,7 @@ get '/oauth/callback' do
      { 'client_id' => ENV['INSTAGRAM_CLIENT_ID'], 
       'client_secret' => ENV['INSTAGRAM_CLIENT_SECRET'],
       'grant_type' => 'authorization_code',
-      'redirect_uri' => 'https://shrouded-badlands-24074.herokuapp.com/oauth/callback',
+      'redirect_uri' => 'http://localhost:4567/oauth/callback',
       'code' => params[:code].to_s
       })
 

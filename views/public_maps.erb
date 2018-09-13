@@ -1,0 +1,13 @@
+<div class='public-maps'>
+  <% @users.each do  |user| %>
+    <div class="user-map-thumbnail">
+      <a href="/maps/<%= user.id %>">
+        <img src="<%= user.profile_pic_url%>" alt="">
+        <span>
+          <h4>
+            <%= user.instagram_username %>
+          </h4>
+        </span></a>   
+    </div>
+  <% end %> 
+</div>

@@ -1,17 +1,49 @@
+/* Map */
+
 #map {
   height: 100% !important;
 }
 
+.left-nav {
+  height: 60px;
+  width: 30px;
+  border: 1px double #fed165;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 60px;
+  border-top-right-radius: 60px;
+  color: #d02896;
+  position: absolute;
+  z-index: 1;
+  top: 47%;
+}
+
+.right-nav {
+  height: 60px;
+  width: 30px;
+  border: 1px double #fed165;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  color: #d02896;
+  text-align: center;
+  position: absolute;
+  top: 47%;
+  right: 0;
+  z-index: 1;
+}
+
+/* General */
 html,
 body {
   height: 100%;
   margin: 0;
-  padding: 0;  
+  padding: 0;
   font-size: 1em;
   font-family: 'Rubik',
     sans-serif;
   background-color: whitesmoke;
 }
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -20,7 +52,7 @@ body {
 h1 {
   font-size: 2em;
   font-family: 'Pacifico',
-  cursive;
+    cursive;
 }
 
 /* NAV BAR Styles */
@@ -155,11 +187,11 @@ button:hover {
 }
 
 .about {
-  margin: 8rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   text-align: center;
   width: 80%;
   background-color: white;
-  padding: 3rem;
+  padding: 2rem;
   border: 2px solid #d02896;
   border-radius: 1rem;
 }
@@ -167,6 +199,54 @@ button:hover {
 .about h3 {
   margin-bottom: 1.5rem;
   font-weight: 400;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 4rem auto 0 auto;
+  text-align: center;
+  width: 90%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.welcome-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-right {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome h3 {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 90%;
+  font-size: 2rem;
+  padding-bottom: 0.2rem;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  background-color: #fed165;
+  widows: 75%;
+}
+
+
+.welcome img {
+  width: 80%;
+}
+
+.welcome p {
+  width: 60%;
 }
 
 .authenticate {
@@ -220,6 +300,7 @@ button:hover {
 .hidden {
   display: none;
 }
+
 /* Mobile CSS */
 
 @media (max-width: 380px) {
@@ -300,10 +381,11 @@ button:hover {
     margin-top: 2rem;
     font-size: 1.5rem;
   }
-  
+
   .drawer-open {
-    left:0;
+    left: 0;
   }
+
   .logo-img {
     width: 2em;
     margin: 0;
