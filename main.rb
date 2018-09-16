@@ -80,6 +80,8 @@ post '/users' do
   erb :dashboard
 end
 
+
+
 get '/about' do
   erb :about
 end
@@ -113,6 +115,11 @@ post '/session' do
   else 
     erb :login
   end
+end
+
+delete '/session' do
+ session[:user_id] = nil
+ redirect '/login'
 end
 
 get '/oauth/callback' do
