@@ -69,18 +69,19 @@ get '/signup' do
 end
 
 post '/users' do
-  unless logged_in? || User.find_by(email: params[:email])
+  if logged_in? || User.find_by(email: params[:email])
     redirect '/'
   else
     user = User.new
     user.email = params[:email]
     user.password = params[:password]
+    p "this is the save route"
+    p user
+    p user.valid?
     user.save
   end
   erb :dashboard
 end
-
-
 
 get '/about' do
   erb :about

@@ -29,7 +29,7 @@
       <div class="nav-bar-right">
       <% if logged_in?  %>
         <img class="profile-pic" src="<%= current_user.profile_pic_url%>" alt="">
-        <form class="logout-form" action="/session/" method="post">
+        <form class="logout-form" action="/session" method="post">
         <input type="hidden" name="_method" value="delete">
         <button>Logout</button>
         </form>
@@ -68,7 +68,7 @@
       <div><a href="/public">Public Maps</a></li>
       <% if logged_in? %>
       <div>
-      <form action="/session/" method="post">
+      <form action="/session" method="post">
         <input type="hidden" name="_method" value="delete">
         <button>Logout</button>
         </form>
