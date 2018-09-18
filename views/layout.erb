@@ -18,7 +18,11 @@
   <header>
     <nav class="nav-bar hide-mobile">
       <div class="nav-bar-left">
+        <% if logged_in? %>
+        <a href="/dashboard">Create Map</a>
+        <% else  %>
         <a href="/about">About</a>
+        <% end  %>
         <a href="/public">View Public Maps</a>
       </div>
       <div class="logo">
@@ -29,9 +33,9 @@
       <div class="nav-bar-right">
       <% if logged_in?  %>
         <img class="profile-pic" src="<%= current_user.profile_pic_url%>" alt="">
-        <form class="logout-form" action="/session" method="post">
+        <form class="logout-form" action="/session/" method="post">
         <input type="hidden" name="_method" value="delete">
-        <button>Logout</button>
+        <button class= "hide-mobile">Logout</button>
         </form>
       <% else  %>
         <a href="/login">Login</a>
@@ -52,10 +56,6 @@
       <h1>TravelGram</h1>
       <% if logged_in? %>
       <img class="profile-pic" src="<%= current_user.profile_pic_url%>" alt="">
-      <form action="/session/" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <button>Logout</button>
-        </form>
       </div>
       <% else %>
       <img class="logo-img" src="/images/Maplogo.png" alt="">
@@ -68,9 +68,9 @@
       <div><a href="/public">Public Maps</a></li>
       <% if logged_in? %>
       <div>
-      <form action="/session" method="post">
+      <form action="/session/" method="post">
         <input type="hidden" name="_method" value="delete">
-        <button>Logout</button>
+        <button class>Logout</button>
         </form>
       </div>
       <% end  %>
