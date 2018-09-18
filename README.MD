@@ -2,17 +2,17 @@
 
 ### Give it a go
 
-In its current state due to the limitations of Instagrams API the app is constricted to sandbox mode if you would like to use the app send me a message and I will verify you as a User. You can use the app here.
+In its current state due to the limitations of Instagrams API the app is constricted to sandbox mode if you would like to use the app send me a message and I will verify you as a user.
 
-[TravelGram][https://shrouded-badlands-24074.herokuapp.com]
+[TravelGram][https://travelgram1.herokuapp.com]
 
 ### Concept
 
-The initial idea for the app was to create a frictionless mobile app that enabled the Instagram users to visualise their phtotos and travels across a map. Users created 'trips' based on a date range which they could then simply borwse and interact with acorss the map.
+The initial idea for the app was to create a frictionless mobile app that enabled the Instagram users to visualise their phtotos and travels across a map. Users created 'trips' based on a date range which they could then simply browse and interact with across the map.
 
 ### Approach
 
-Even though this was a backend focused project I realised from the get go that for TravelGram to be a usable product it would need a big focus on the design and user experience. 
+Even though this was a backend focused project I realised that TravelGramneeded to focus on the design and user experience. 
 
 My design aims were, 
 1. Simple, minimal site design aimed towards ease of use, minimal clicks to get started
@@ -58,4 +58,3 @@ Features that I wanted to implement were in listed heiracy are,
 4. Tagging other users within trips
 5. user goals and acheivements
 
-#### Planning Documents
