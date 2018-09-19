@@ -1,7 +1,7 @@
 /* Map */
 
 #map {
-  height: 100% !important;
+  height: 88vh !important;
 }
 
 .left-nav {
@@ -35,6 +35,7 @@
 /* General */
 html,
 body {
+  overflow: hidden;
   height: 100%;
   margin: 0;
   padding: 0;
